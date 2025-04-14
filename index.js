@@ -17,15 +17,15 @@ async function main() {
   console.log(`Target branch: ${targetBranch}`);
 
   // Get the diff between branches
-  const diff = execSync(`git diff ${targetBranch}...${currentBranch}`).toString();
+  const diff = execSync(`git diff ${targetBranch}..${currentBranch}`).toString();
 
   if (!diff.trim()) {
     console.log('No differences found between branches.');
     return;
   }
-
+console.log(diff,"diff")
   // Generate PR message with AI
-  const prMessage = await generatePRContent(diff, currentBranch, targetBranch);
+//   const prMessage = await generatePRContent(diff, currentBranch, targetBranch);
 
   // Commit staged changes if any
   if (status.staged.length > 0) {
