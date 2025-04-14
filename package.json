@@ -1,0 +1,19 @@
+{
+  "name": "pr-gen-cli",
+  "version": "1.0.0",
+  "description": "CLI to auto-generate PRs using Vercel AI",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@ai-sdk/openai": "^1.3.11",
+    "ai": "^4.3.6",
+    "dotenv": "^16.5.0",
+    "simple-git": "^3.27.0"
+  }
+}
